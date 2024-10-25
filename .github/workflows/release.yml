@@ -28,5 +28,5 @@ jobs:
           version: latest
           args: release --clean
           workdir: ./
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
