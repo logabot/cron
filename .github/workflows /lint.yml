@@ -1,8 +1,6 @@
 on:
-  push
-
-permissions:
-    packages: read
+  push:
+    branches: [ "*" ]
 
 name: check code
 
