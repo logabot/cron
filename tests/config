@@ -1,0 +1,2 @@
+*/1 * * * * echoDate date
+*/1 * * * * echoDateLS date && pwd && ls -la

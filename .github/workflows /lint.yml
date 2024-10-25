@@ -1,0 +1,20 @@
+on:
+  push:
+    branches: [ "*" ]
+
+name: check code
+
+jobs:
+  runs-on: ubuntu-latest
+  golint:
+    steps:
+      - uses: golangci/golangci-lint-action@v6
+        with:
+          version: latest
+
+  fmt:
+    steps:
+      - uses: Jerome1337/gofmt-action@v1.0.5
+        with:
+          gofmt-path: './'
+          gofmt-flags: '-l -d'
