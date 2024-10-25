@@ -10,4 +10,3 @@ builds:
     goarch:
       - amd64
       - arm64
-    gobinary: "go1.23.2"
