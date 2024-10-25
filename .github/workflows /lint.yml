@@ -5,6 +5,7 @@ on:
 name: check code
 
 jobs:
+  runs-on: ubuntu-latest
   golint:
     steps:
       - uses: golangci/golangci-lint-action@v6
