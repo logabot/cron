@@ -53,9 +53,9 @@ func main() {
 		defaultShell = constShell
 	}
 
-	flag.StringVar(&shell, "shell", defaultShell, "define shell for run cron command")
-	flag.StringVar(&configPath, "config", defaultConfigPath, "crontab file")
-	flag.StringVar(&entrypoint, "entrypoint", defaultEntrypoint, "shell script filename that runs before cron start")
+	flag.StringVar(&shell, "shell", defaultShell, "define shell for run cron command. env: SHELL")
+	flag.StringVar(&configPath, "config", defaultConfigPath, "crontab file. env: CONFIG")
+	flag.StringVar(&entrypoint, "entrypoint", defaultEntrypoint, "shell script filename that runs before cron start. env: ENTRYPOINT")
 	flag.Parse()
 
 	MainLog := log.New(os.Stdout, "Cron: ", log.LstdFlags|log.Lmsgprefix)
