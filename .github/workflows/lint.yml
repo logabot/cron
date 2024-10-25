@@ -5,16 +5,18 @@ on:
 name: check code
 
 jobs:
-  runs-on: ubuntu-latest
   golint:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: golangci/golangci-lint-action@v6
         with:
           version: latest
 
   fmt:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: Jerome1337/gofmt-action@v1.0.5
         with:
-          gofmt-path: './'
           gofmt-flags: '-l -d'
