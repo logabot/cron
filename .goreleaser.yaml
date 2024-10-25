@@ -1,0 +1,13 @@
+
+builds:
+  - id: cron
+    main: ./
+    binary: cron
+
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    gobinary: "go1.23.2"
