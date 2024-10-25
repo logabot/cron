@@ -6,12 +6,8 @@ on:
       - 'v*'
 
 jobs:
-  build:
+  build-go:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [linux, darwin]
-        arch: [arm64, amd64]
     permissions:
       contents: write
     steps:
