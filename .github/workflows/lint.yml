@@ -5,14 +5,15 @@ on:
 name: check code
 
 jobs:
-  runs-on: ubuntu-latest
   golint:
+    runs-on: ubuntu-latest
     steps:
       - uses: golangci/golangci-lint-action@v6
         with:
           version: latest
 
   fmt:
+    runs-on: ubuntu-latest
     steps:
       - uses: Jerome1337/gofmt-action@v1.0.5
         with:
